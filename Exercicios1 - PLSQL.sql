@@ -1,16 +1,16 @@
 set serveroutput on;
 
 DECLARE		
-			a	number(2);
-      b number(2);
+a number(2);
+b number(2);
 BEGIN		
-			FOR	a	in	0	..	10	LOOP		
+ FOR a in 0 .. 10 LOOP		
       IF MOD(a, 2) != 0 THEN
             FOR b in 0 .. 10 LOOP
             dbms_output.put_line('Resultado: ' || a || 'x' || b || '=' || a * b);
             END	LOOP;	
             END IF;
-      END	LOOP;		
+      END LOOP;		
 END;
 
 
